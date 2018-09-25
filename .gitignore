@@ -1,0 +1,23 @@
+# Ignore all log files
+*.log
+
+# Ignore Compiled code
+*.pyc
+__pycache__
+
+# Ignore user keys
+# Key file must be created manually
+ebay_config.py
+
+# Ignore user generated code Scratchpad
+scratch
+
+# Ignore hidden system files
+.DS_Store
+.idea
+
+# Ignore developer notes
+usage.txt
+
+# Ignore database
+*.sqlite
