@@ -58,3 +58,6 @@ class PandasModel(QtCore.QAbstractTableModel):
         self._df.sort_values(colname, ascending= order == QtCore.Qt.AscendingOrder, inplace=True)
         self._df.reset_index(inplace=True, drop=True)
         self.layoutChanged.emit()
+
+    def getCells(self):
+        pass

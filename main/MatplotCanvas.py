@@ -16,7 +16,7 @@ class App(QMainWindow):
         super().__init__()
         self.left = 10
         self.top = 10
-        self.title = 'PyQt5 matplotlib example - pythonspot.com'
+        self.title = 'PlotCanvas'
         self.width = 640
         self.height = 400
         self.initUI()
@@ -26,13 +26,11 @@ class App(QMainWindow):
         self.setGeometry(self.left, self.top, self.width, self.height)
 
         m = PlotCanvas(self, width=5, height=4)
-        # m.move(0,0)
 
         button = QPushButton('PyQt5 button', self)
-        button.setToolTip('This s an example button')
+        button.setToolTip('This is an example button')
         button.move(500,0)
         button.resize(140,100)
-
 
         self.show()
 
@@ -57,7 +55,6 @@ class PlotCanvas(FigureCanvas):
         data = [random.random() for i in range(25)]
         print(data)
         ax = self.figure.add_subplot(111)
-        # ax.plot(data, 'r-')
         ax.plot(data)
         ax.set_title('PyQt Matplotlib Example')
         self.draw()

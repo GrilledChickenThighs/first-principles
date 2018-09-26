@@ -21,12 +21,7 @@ class Window(QtWidgets.QWidget):
 
         # Set up table for pandas dataframe
         self.pandasTv = QtWidgets.QTableView(self)
-        self.pandasTv.setSortingEnabled(True)
-
-
-        # Set up MatplotlibPlotCanvas
-        # m = PlotCanvas(self, width=5, height=4)
-        # m.move(0,0)
+        self.pandasTv.setSortingEnabled(False)
 
         v_box = QtWidgets.QVBoxLayout()
         h_box = QtWidgets.QHBoxLayout()
@@ -53,9 +48,6 @@ class Window(QtWidgets.QWidget):
         self.show()
 
 
-
-
-
     def btn_clk(self):
         try:
             print(self.le.text())
@@ -66,19 +58,11 @@ class Window(QtWidgets.QWidget):
             print(e)
 
     def btn_plot(self):
-        MatplotCanvas.App()
-        # xaxis
-        # yaxis
-        # self.p_window = MatplotCanvas.App()
-        # self.p_canvas = MatplotCanvas.PlotCanvas(self)
-        # self.p_canvas.plot(data=[1,2,3,4,5,6])
-        # self.p_window.initUI()
-        # MatplotCanvas.PlotCanvas().plot(data=[1,2,3,4,5,6])
-        # self.plot_ui = PlotCanvas(self, width=5, height=4)
-        # self.plot_ui.s
-        # self.show()
+        self.p_window = MatplotCanvas.App()
+        self.p_window.initUI()
 
 
 app = QtWidgets.QApplication(sys.argv)
 a_window = Window()
 sys.exit(app.exec_())
+help(QtWidgets.QAbstractItemView)
